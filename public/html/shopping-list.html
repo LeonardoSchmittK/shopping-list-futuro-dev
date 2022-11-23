@@ -7,13 +7,139 @@
     <link rel="shortcut icon" href="../img/logo--.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&family=Glory:ital,wght@0,600;1,400&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Glory:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/cf41a05b95.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/general.css">
+    <link rel="stylesheet" href="../style/variables.css">
 
-    <title>Lista de Comprass - Futuro[DEV]</title>
+    <title>Lista de Compras - Futuro[DEV]</title>
 </head>
 <body>
-    <h1>Lista de compras</h1>
+    <div class="layout">
+        <div class="content">
+             <header class="header">
+            <nav class="header__nav">
+                <ul class="nav__list left">
+                    <li class="nav__list__item">
+                        <a class="nav__list__anchor active" href="../html/index.html">
+                            Home 
+                    >
+
+                        </a>
+                    </li>
+                    <li class="nav__list__item">
+                        <a class="nav__list__anchor"  href="../html/shopping-list.html">
+                            Shopping List
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav__list right">
+                    <li>
+                        <a href="https://github.com/LeonardoSchmittK">
+
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/LeonardoSchmittK">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="main-content">
+             <main class="shop-list__container">
+             <section class="header__controls">
+            <header class="controls__header">
+                <img src="../img/logo.png" alt="logo">
+                <h1 class="controls__title"  contenteditable >Lista de compras</h1>
+            </header>
+            <div class="form-container">
+                  <form action="" method="post" class="form">
+                        <input class="form__input" type="text" maxlength="80" minlength="5" required>
+                        <button class="form__submit" type="submit">+</button>
+                    </form>
+            </div>
+                  
+            </section>
+        </main>
+
+        <main class="shopping-result">
+            <h4 class="shopping-result__format">R$</h4>
+            <h1 class="shopping-result__amount">54</h1>
+            <h4 class="shopping-result__cents">,00</h4>
+        </main>
+        </div>
+        <div class="shopping-list-container">
+            <div class="shopping-list-item">
+                <input type="checkbox" name="" id="">
+                <h3>Batata Doce</h3>
+                <div class="remove-box">
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+            </div>
+
+            <div class="shopping-list-item">
+                <input type="checkbox" name="" id="">
+                <h3>Batata Doce</h3>
+                <div class="remove-box">
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+            </div>
+
+            <div class="shopping-list-item">
+                <input type="checkbox" name="" id="">
+                <h3>Batata Doce</h3>
+                <div class="remove-box">
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+            </div>
+
+            <div class="shopping-list-item">
+                <input type="checkbox" name="" id="">
+                <h3>Batata Doce</h3>
+                <div class="remove-box">
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+            </div>
+
+            <div class="shopping-list-item">
+                <input type="checkbox" name="" id="">
+                <h3>Batata Doce</h3>
+                <div class="remove-box">
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+            </div>
+
+            <div class="shopping-list-item">
+                <input type="checkbox" name="" id="">
+                <h3>Batata Doce</h3>
+                <div class="remove-box">
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+            </div>
+
+            <div class="shopping-list-item">
+                <input type="checkbox" name="" id="">
+                <h3>Batata Doce</h3>
+                <div class="remove-box">
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+            </div>
+
+             <div class="shopping-list-item">
+                <input type="checkbox" name="" id="">
+                <h3>Batata Doce</h3>
+                <div class="remove-box">
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+            </div>
+        </div>
+       
+        </div>
+    </div>
+    
 </body>
 </html>

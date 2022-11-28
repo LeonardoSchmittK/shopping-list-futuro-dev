@@ -6,13 +6,16 @@ class Util {
 
 
     static displayBanner(){
-        document.querySelector('.banner').style.visibility='hidden'
+        document.querySelector(".banner i").style.animation=""
+        document.querySelector('.banner').style.visibility ='hidden'
+       
+
+    }
+
+    static displayBannerPrice(){
         document.querySelector('.layout').removeChild(document.querySelector('.bannerPrice'))
         document.querySelector(".content").style.filter="blur(0px)"
-
     }
 
-    static updateLocalStorage(property,value){
         
-    }
 }

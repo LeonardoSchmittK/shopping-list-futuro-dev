@@ -1,175 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../img/logo--.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Glory:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Glory:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/cf41a05b95.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/general.css">
     <link rel="stylesheet" href="../style/variables.css">
-
     <title>Lista de Compras - Futuro[DEV]</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="layout">
-        <div class="banner">
-            <h1>Adicionado com sucesso!</h1>
-            <div class="remove-box remove-display">
-                <div onclick="Util.displayBanner()">
-
-                    <i class="fa-solid fa-xmark"></i>
-                </div>
-            </div>
+      <div class="banner">
+        <div class="success-box">
+          <i class="fa-solid fa-check"></i>
         </div>
-
-       
-
-        <div class="content">
-             <header class="header">
-            <nav class="header__nav">
-                <ul class="nav__list left">
-                    <li class="nav__list__item">
-                        <a class="nav__list__anchor active" href="../html/index.html">
-                            Home 
-                    >
-
-                        </a>
-                    </li>
-                    <li class="nav__list__item">
-                        <a class="nav__list__anchor"  href="../html/shopping-list.html">
-                            Shopping List
-                        </a>
-                    </li>
-                </ul>
-                <ul class="nav__list right">
-                    <li>
-                        <a href="https://github.com/LeonardoSchmittK">
-
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/LeonardoSchmittK">
-                            <i class="fa-brands fa-linkedin"></i>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+        <h1>Item adicionado com sucesso!</h1>
+        <div class="remove-box remove-display">
+          <div onclick="Util.displayBanner()">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <header class="header">
+          <nav class="header__nav">
+            <ul class="nav__list left">
+              <li class="nav__list__item">
+                <a class="nav__list__anchor active" href="../html/index.html"> Home ></a>
+              </li>
+              <li class="nav__list__item">
+                <a class="nav__list__anchor" href="../html/shopping-list.html"> Shopping List </a>
+              </li>
+            </ul>
+            <ul class="nav__list right">
+              <li>
+                <a href="https://github.com/LeonardoSchmittK">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/leonardo-schmitt-5743501b0/">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </header>
         <div class="main-content">
-             <main class="shop-list__container">
-             <section class="header__controls">
-            <header class="controls__header">
+          <main class="shop-list__container">
+            <section class="header__controls">
+              <header class="controls__header">
                 <img src="../img/logo.png" alt="logo">
-                <h1 class="controls__title"  contenteditable >Lista de compras</h1>
-            </header>
-            <div class="form-container">
-                  <!-- <form action="#" method="post" class="form" onsubmit="LabSchoolShoppingList.addItem(document.querySelector('.form__input').value)">
-                        <input class="form__input" type="text" maxlength="80" minlength="5" required>
-                        <button class="form__submit" type="submit">+</button>
-                    </form> -->
-
-                    <div class="form">
-                        <input class="form__input" type="text" maxlength="80" minlength="5" required>
-                        <button 
-                        
-                        onclick="App.displayNewItem(document.querySelector('.form__input').value)" 
-                        
-                        class="form__submit" type="submit">+</button>
-                    </div>
-            </div>
-                  
+                <h1 class="controls__title" contenteditable="">Lista de compras</h1>
+              </header>
+              <div class="form-container">
+                <form class="form" onsubmit="App.displayNewItem(document.querySelector('.form__input').value);return false">
+                  <input class="form__input" type="text" maxlength="64" minlength="8" required placeholder="Café 
+																				</>">
+                  <button class="form__submit" type="submit">+</button>
+                </form>
+              </div>
             </section>
-        </main>
-
-        <main class="shopping-result">
+          </main>
+          <main class="shopping-result">
             <h4 class="shopping-result__format">R$</h4>
             <h1 class="shopping-result__amount">00</h1>
             <h4 class="shopping-result__cents">,00</h4>
-        </main>
+          </main>
         </div>
         <div class="shopping-list-container">
-            <h3 class="zero-items-title">You don't have any item :(</h3>
-            
-
-            <!-- <div class="shopping-list-item">
-                <input type="checkbox" name="" id="">
-                <h3>Batata Doce</h3>
-                <div class="remove-box">
-                    <i class="fa-solid fa-trash"></i>
-                </div>
-            </div>
-
-            <div class="shopping-list-item">
-                <input type="checkbox" name="" id="">
-                <h3>Batata Doce</h3>
-                <div class="remove-box">
-                    <i class="fa-solid fa-trash"></i>
-                </div>
-            </div> 
-        -->
-
-            <!-- <div class="shopping-list-item">
-                <input type="checkbox" name="" id="">
-                <h3>Batata Doce</h3>
-                <div class="remove-box">
-                    <i class="fa-solid fa-trash"></i>
-                </div>
-            </div>
-
-            <div class="shopping-list-item">
-                <input type="checkbox" name="" id="">
-                <h3>Batata Doce</h3>
-                <div class="remove-box">
-                    <i class="fa-solid fa-trash"></i>
-                </div>
-            </div>
-
-            <div class="shopping-list-item">
-                <input type="checkbox" name="" id="">
-                <h3>Batata Doce</h3>
-                <div class="remove-box">
-                    <i class="fa-solid fa-trash"></i>
-                </div>
-            </div>
-
-            <div class="shopping-list-item">
-                <input type="checkbox" name="" id="">
-                <h3>Batata Doce</h3>
-                <div class="remove-box">
-                    <i class="fa-solid fa-trash"></i>
-                </div>
-            </div>
-
-            <div class="shopping-list-item">
-                <input type="checkbox" name="" id="">
-                <h3>Batata Doce</h3>
-                <div class="remove-box">
-                    <i class="fa-solid fa-trash"></i>
-                </div>
-            </div>
-
-             <div class="shopping-list-item">
-                <input type="checkbox" name="" id="">
-                <h3>Batata Doce</h3>
-                <div class="remove-box">
-                    <i class="fa-solid fa-trash"></i>
-                </div> -->
-            </div>
+          <h3 class="zero-items-title">Nenhum item na lista :(</h3>
         </div>
-       
-        </div>
+      </div>
     </div>
-    
-
+    </div>
     <script src="../js/Util.js"></script>
     <script src="../js/LayoutModel.js"></script>
     <script src="../js/ShoppingList.js"></script>
     <script src="../js/Index.js"></script>
-</body>
+  </body>
 </html>

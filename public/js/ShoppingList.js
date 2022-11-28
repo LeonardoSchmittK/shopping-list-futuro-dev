@@ -2,82 +2,81 @@ class ShoppingList {
     items = []
     totalPrice = 0
 
-    addItem(item){
-
-        if(!this.checkIfAlreadyExists(item)){
+    addItem(item) {
             this.items.push(item)
             this.consoleItems()
             return
-        }
-            
-       
     }
 
-    checkIfAlreadyExists(item){
-        if(this.items.indexOf(item)==-1){
-            return false
-        }
-        return true
-    }
-
-    removeItem(item){
-            this.items.splice(this.getItemId(item),1)
-            this.consoleItems()
-            return
-    }
     
-    getItemId(item){
-           return  this.items.indexOf(item)
-            
+
+    removeItem(id) {
+        let index;
+        this.items.map((arrItem, idex) => {
+            if (arrItem.item === id) {
+                index = idex
+                this.totalPrice -= Number(this.items[index].price)
+                console.log(this.items);
+                this.items.splice(index, 1)
+                console.log(this.items);
+                return
+            }
+
+
+        })
+
+
     }
 
-    consoleItems(){
+    getItemId(item) {
+        return this.items.indexOf(item)
+
+    }
+
+    consoleItems() {
         console.log(this.items)
         return
     }
 
-    consoleHello(){
+    consoleHello() {
         console.log("Hello, world");
         return
     }
 
-    getList(){
+    getList() {
         return this.items
     }
 
-    isEmpty(){
-        return this.items.length==0
+    isEmpty() {
+        return this.items.length == 0
     }
 
-    addPrice(id,price){
-        console.log(id);
-        console.log(price);
-        let idex
-       const selected =  this.items.filter((item,index)=>{
-            if(item.item===id){
-                idex = index
+    addPrice(itemName = "item", price = 0) {
+
+        let index;
+        const selected = this.items.map((arrItem, idex) => {
+            if (arrItem.item === itemName) {
+                index = idex
+                this.items[index].price = price
+                this.totalPrice += Number(price)
             }
-    
-    })
 
 
-   
-
-    console.log(selected);
-        this.items[idex].price=price
-        this.totalPrice+=(+price)
-    }
-
-    checkItem(id){
-            let idex
-        const selected = this.items.filter((item,index)=>{
-            if(item.item===id){
-                idex = index
-            }
         })
-        
-        this.items[idex].checked = true
-        localStorage.items = JSON.stringify([...this.items])
+
+    }
+
+    checkItem(itemName) {
+        let index;
+        const selected = this.items.map((arrItem, idex) => {
+            if (arrItem.item === itemName) {
+                index = idex
+                this.items[index].checked = true
+            }
+
+
+        })
+
     }
 
 }

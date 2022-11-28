@@ -4,50 +4,40 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow: hidden;
 }
-
 ul {
     list-style: none;
 }
-
 a {
     text-decoration: 0;
-    color:var(--main-color)
+    color:var(--main-color) 
 }
-
-
-
-
 a:active {
     color: var(--main-color);
 }
-
-
-
 h1 {
     font-family: 'Dongle', sans-serif;
     font-size: 5em;
     color: var(--main-color);
     outline: 0;
-    
 }
-
 input {
     border: 0;
     outline: 0;
     padding: 0.4em;
+   
 }
-
 button {
     outline: 0;
     border: 0;
+    background-color: var(--main-color);
+    color:#fff;
 }
-
 body {
-    /* background-color:  var(--bg-color-low-opacity); */
+   /* background-color: var(--bg-color-low-opacity);
+    */
     background:linear-gradient(145deg, #F3F5FF 70%, #a5aee042 20%);
     height: 100vh;
 }
-
 *::selection {
     background-color: var(--bg-color-low-opacity);
     color:var(--secondary-color);

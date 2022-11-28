@@ -17,6 +17,18 @@
 </head>
 <body>
     <div class="layout">
+        <div class="banner">
+            <h1>Adicionado com sucesso!</h1>
+            <div class="remove-box remove-display">
+                <div onclick="Util.displayBanner()">
+
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+        </div>
+
+       
+
         <div class="content">
              <header class="header">
             <nav class="header__nav">
@@ -57,10 +69,19 @@
                 <h1 class="controls__title"  contenteditable >Lista de compras</h1>
             </header>
             <div class="form-container">
-                  <form action="" method="post" class="form">
+                  <!-- <form action="#" method="post" class="form" onsubmit="LabSchoolShoppingList.addItem(document.querySelector('.form__input').value)">
                         <input class="form__input" type="text" maxlength="80" minlength="5" required>
                         <button class="form__submit" type="submit">+</button>
-                    </form>
+                    </form> -->
+
+                    <div class="form">
+                        <input class="form__input" type="text" maxlength="80" minlength="5" required>
+                        <button 
+                        
+                        onclick="App.displayNewItem(document.querySelector('.form__input').value)" 
+                        
+                        class="form__submit" type="submit">+</button>
+                    </div>
             </div>
                   
             </section>
@@ -68,12 +89,15 @@
 
         <main class="shopping-result">
             <h4 class="shopping-result__format">R$</h4>
-            <h1 class="shopping-result__amount">54</h1>
+            <h1 class="shopping-result__amount">00</h1>
             <h4 class="shopping-result__cents">,00</h4>
         </main>
         </div>
         <div class="shopping-list-container">
-            <div class="shopping-list-item">
+            <h3 class="zero-items-title">You don't have any item :(</h3>
+            
+
+            <!-- <div class="shopping-list-item">
                 <input type="checkbox" name="" id="">
                 <h3>Batata Doce</h3>
                 <div class="remove-box">
@@ -87,9 +111,10 @@
                 <div class="remove-box">
                     <i class="fa-solid fa-trash"></i>
                 </div>
-            </div>
+            </div> 
+        -->
 
-            <div class="shopping-list-item">
+            <!-- <div class="shopping-list-item">
                 <input type="checkbox" name="" id="">
                 <h3>Batata Doce</h3>
                 <div class="remove-box">
@@ -134,12 +159,17 @@
                 <h3>Batata Doce</h3>
                 <div class="remove-box">
                     <i class="fa-solid fa-trash"></i>
-                </div>
+                </div> -->
             </div>
         </div>
        
         </div>
     </div>
     
+
+    <script src="../js/Util.js"></script>
+    <script src="../js/LayoutModel.js"></script>
+    <script src="../js/ShoppingList.js"></script>
+    <script src="../js/Index.js"></script>
 </body>
 </html>

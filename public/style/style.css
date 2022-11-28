@@ -175,7 +175,10 @@
     flex-direction: column;
     gap: 1.6em;
     overflow-y: scroll;
+    scrollbar-width: thin;
     padding-right: 4em;
+    border-left: 1px solid var(--bg-color-low-opacity);
+
 }
 
 .shopping-list-item {
@@ -198,8 +201,52 @@
 
 .remove-box {
     position: absolute;
-    top:0.4em;
-    right: 0.3em;
-    padding: 0.2em;
-    color:var(--secondary-color)
+    top:0.8em;
+    right: 0.8em;
+    color:var(--secondary-color);
+    background-color: var(--bg-color-low-opacity);
+    border-radius: 0.2em;
+    cursor: pointer;
 }
+
+.remove-display i{
+    font-size: 1.5em;
+    color:var(--main-color);
+    padding:0.3em 0.5em;
+
+}
+
+.banner {
+    position: absolute;
+    background-color: var(--main-color);
+    padding: 3em;
+    border-radius: 0.4em;
+    box-shadow: 15px 25px 50px rgba(86, 31, 94, 0.318);
+    z-index: 9999;
+    top: 30%;
+    left:30%;
+    visibility: hidden;
+    border: 5px solid var(--low-opacity-color);
+}    
+
+.bannerPrice {
+    /* position: absolute;
+    background-color: var(--main-color);
+    padding: 3em;
+    border-radius: 0.4em;
+    box-shadow: 15px 25px 50px rgba(86, 31, 94, 0.318);
+    top:30%;
+    left:30%; */
+
+    visibility: visible;
+}
+
+.banner h1 {
+    color:#fff;
+}
+
+.zero-items-title {
+    margin: auto;
+    color: var(--low-opacity-color);
+}
+
